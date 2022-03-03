@@ -1,0 +1,127 @@
+:root {
+    --main--text: floralwhite;
+    --primary: #93c1d0;
+    --danger: #df3880;
+}
+
+body{
+    background-image: url(./images/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Assistant', sans-serif;
+}
+
+.search__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 35vh;
+    font-size: 35px;
+    max-width: 550px;
+    margin: 0 auto;
+
+}
+
+.button{
+    background-color: var(--primary);
+    color: var(--main--text);
+    font-family: 600px;
+    cursor: pointer;
+}
+.button:active
+{
+    transform: scale(0.95);
+}
+.button:hover
+{
+    color: var(--danger);
+}
+
+.container{
+    background-color: rgba(70,69,65,0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+.search__title{
+    color: var(--main--text);
+    text-align: center;
+    font-size: 30px;
+}
+.search__input__container input{
+    border: none;
+    border-bottom: 5px solid var(--primary);
+    outline: none;
+  
+    
+
+}
+.search__input__container input{
+    
+    background: transparent;
+    color: var(--main--text);
+    width : 415px;  
+    
+
+}
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease;
+    text-indent: -88%;
+    opacity: 1;
+}
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: var(--main--text);
+    font-weight: lighter;
+}
+.result__item {
+    margin-bottom: 10px;
+    color: var(--main--text);
+}
+.result__item__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lyrics {
+    white-space: pre-line;
+}
+
+.lyrics__item {
+    color: var(--main--text);
+    text-align: center;
+}
+
+.loader {
+    color: var(--main--text);
+}
+
+.backButton{
+    background-color: var(--danger);
+    color: var(--main--text);
+    font-family: 600px;
+    cursor: pointer;
+    align-items: center;
+}
+
+@media screen and (max-width:440px) {
+    .search__container,
+    .results__container,
+    .lyrics__container {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .search__title {
+        font-size: 2.5rem;
+    }
+    .search__input__container {
+        font-size: initial;
+    }
+    .search__input__container input {
+        width: 170px;
+    }
+}
