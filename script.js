@@ -54,7 +54,6 @@ function displayLyricsList(data)
     
     searchResult.innerHTML = `${
         data.data.map(song=>`<div class="result__item row d-flex justify-content-center align-items-center text-center text-sm-left">
-        <img src="${song.album.cover_small}" alt="${song.artist.name}" srcset="">
         <p class="col-10 col-sm-6 mb-0 result__item__title"><strong>${song.artist.name}</strong> - ${song.title}</p>
         <button id="getLyrics" class="col-8 col-sm-3 btn button" data-artist="${song.artist.name}" data-title="${song.title}">Get Lyrics</button>   
         
